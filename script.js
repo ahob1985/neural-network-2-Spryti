@@ -1,4 +1,4 @@
-// Author:
+// Author: Jordan Muturi
 
 // Global UI Variables
 let canvasDiv;
@@ -64,7 +64,11 @@ function buildButtons() {
   trainButton.mousePressed(trainModel);
   trainButton.parent(buttonDiv);
   // new code below
-
+  saveDataButton = createButton("Save Data");
+  saveDataButton.parent(buttonDiv);
+  saveDataButton.mousePressed(function() {
+    model.saveData();
+  });
 }
 
 function createMusicSystem() {
